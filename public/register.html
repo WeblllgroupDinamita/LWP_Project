@@ -34,10 +34,9 @@
 
 			<!-- initilized firebase object -->
 			<script defer src="/__/firebase/init.js"></script>
-			<!-- calling user authentication functions -->
-			<script defer src="js/Users/isLogin.js"></script>
+
 		</head>
-		<body class="container" onload="validar()">
+		<body class="container">
 			<header class="header row">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 					<div class="container-fluid">
@@ -57,8 +56,8 @@
 										Horoscopo
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_01">
-										<li><a class="dropdown-item" href="PDFList.html">Lista de signos</a></li>
-										<li><a class="dropdown-item" href="addPDF.html">Agregar signo</a></li>
+										<li><a class="dropdown-item" href="lista.html">Lista de signos</a></li>
+										<li><a class="dropdown-item" href="agregar.html">Agregar signo</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -67,7 +66,7 @@
 										Usuarios
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_02">
-										<li><a class="dropdown-item" href="register.html">Registrar nuevo usuario</a></li>
+										<li><a class="dropdown-item" href="registrar.html">Registrar nuevo usuario</a></li>
 										<li><a class="dropdown-item" href="login.html">Autenticar usuario</a></li>
 										<li><a class="dropdown-item" onclick="salir()">Cerrar sesión</a></li>
 									</ul>
@@ -79,7 +78,19 @@
 			</header>
 
 			<main class="row">
-				
+				<h4>Sign up</h4>
+			<div>
+				<label for="txtNombre">Nombre:</label><br>
+				<input type="text" id="txtNombre"><br><br>
+
+				<label for="txtEmail">Correo electrónico:</label><br>
+				<input type="text" id="txtEmail"><br><br>
+
+				<label for="txtContra">Contraseña:</label><br>
+				<input type="text" id="txtContra">
+				<br><br>
+				<input type="button" id="btnInsUser" name="btnInsUser" value="Insertar Usuario">
+			</div>
 			</main>
 
 			<footer class="row">
@@ -89,6 +100,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 					integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 					crossorigin="anonymous"></script>
-					
+			<!-- load js code to register a new user  -->
+			<script defer src="js/Users/signup.js"></script>
 		</body>
 		</html>
