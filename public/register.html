@@ -1,6 +1,13 @@
 <!doctype html>
 		<html lang="en">
 		<head>
+
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		  <script>"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"</script>
+		  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+		  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css">
+		  <script src="https://kit.fontawesome.com/2c7bfef965.js" crossorigin="anonymous"></script>
 			<!-- Visualization environment -->
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -36,7 +43,7 @@
 			<script defer src="/__/firebase/init.js"></script>
 
 		</head>
-		<body class="container">
+		<body style="background-color: #A0A0A0;" class="container">
 			<header class="header row">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 					<div class="container-fluid">
@@ -66,7 +73,7 @@
 										Usuarios
 									</a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_02">
-										<li><a class="dropdown-item" href="registrar.html">Registrar nuevo usuario</a></li>
+										<li><a class="dropdown-item" href="register.html">Registrar nuevo usuario</a></li>
 										<li><a class="dropdown-item" href="login.html">Autenticar usuario</a></li>
 										<li><a class="dropdown-item" onclick="salir()">Cerrar sesión</a></li>
 									</ul>
@@ -78,19 +85,80 @@
 			</header>
 
 			<main class="row">
-				<h4>Sign up</h4>
-			<div>
-				<label for="txtNombre">Nombre:</label><br>
-				<input type="text" id="txtNombre"><br><br>
+			<div class="container-fluid ">
+				<div class="row ">
+				  <div class="col col-3"></div>
+				  <div class="col col-7">
+					<div class="card rounded-4"
+					  style=" margin: auto; margin-top: 2%; margin-bottom: 2%; padding-left: 10%; padding-right: 10%; margin-left: 9%; margin-right: 9%;">
+					<!--Body of the -->
+					  <div class="card-body">
+						<form class="BG">
+						  <div class="mb-3 ">
+							<!--Logo Hat-->
+							<!--<img class="logoImg mb-4" src="/LWP/Images/LWP_Logo(Hat).png" width="40" height="35" />-->
+							<div class="loader"></div>
+			
+							<a style="display: block;" href="/LWP/InfoPage/login.html">
+							  <button style="background-color: white; border: none;" class="buttonX" type="button">
+								<svg viewBox="0 0 16 16" width="16" height="16">
+								 
+								</svg>
+							  </button>
+							</a>
+							<!--create your account-->
+							<p style="font-size: 35px;" class="fw-bold mb-4">Crea tu cuenta</p>
+			
+							<input type="text" id="txtNombre" placeholder="Nombre de usuario" class="form-control mb-4"
+							  maxlength="50" style="height:50px" required>
+			
+			
+							<input type="text" id="txtEmail" placeholder="Correo electronico"  class="form-control mb-4"
+							  style="height:50px" required>
 
-				<label for="txtEmail">Correo electrónico:</label><br>
-				<input type="text" id="txtEmail"><br><br>
+							  <input  type="text" id="txtContra" placeholder="Contraseña"  class="form-control mb-4"
+							  style="height:50px" required>
 
-				<label for="txtContra">Contraseña:</label><br>
-				<input type="text" id="txtContra">
-				<br><br>
-				<input type="button" id="btnInsUser" name="btnInsUser" value="Insertar Usuario">
-			</div>
+
+				
+									<section>
+							  <div class="row">
+								<!--Option Form to select the month-->
+													
+			
+							  </div>
+							</section>
+							<hr>
+							<!--Button to continue-->
+							<a style="display: block;" href="/LWP/InfoPage/Plans.html">
+								  <button
+								  id="btnInsUser" name="btnInsUser"  value="Insertar Usuario" style="border-color: #A0A0A0; color: white; background-color: #3E4AB8;" type="button"
+								  class=" rounded-5 form-control btn  mb-3 "> Siguiente</button>
+							  </a>
+							</a>
+							<!--Buttons to register with others-->
+							<!--<a style="display: block;" href="https://accounts.google.com/login?hl=es">
+							  <button style="border-color: #A0A0A0;" type="button" class="rounded-5 form-control btn  mb-3"><img
+								  src="/LWP/Images/google-icon.png" height="20"> Registrate con Google
+							  </button>
+							</a>
+							<a style="display: block;" href="https://es-la.facebook.com/login/device-based/regular/login/">
+							  <button style="border-color: #A0A0A0;" type="button"
+								class="rounded-5 form-control btn btn-Facebook mb-4 bi bi-facebook "> Registrate con Facebook
+							  </button>
+			
+							</a>-->
+							<!--Other Options-->
+							<p style="text-align: center;">¿Ya tienes una cuenta?<a href="login.html"
+								style="text-decoration: none;"> Inicia sesión!</a></p>
+
+						</form>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col col-3"></div>
+			  </div>
 			</main>
 
 			<footer class="row">

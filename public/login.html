@@ -1,6 +1,11 @@
 <!doctype html>
 		<html lang="en">
 		<head>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+   			 integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  			<script>"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"</script>
+  			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+ 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css">
 			<!-- Visualization environment -->
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -36,12 +41,12 @@
 			<script defer src="/__/firebase/init.js"></script>
 
 		</head>
-		<body class="container">
+		<body style="background-color: #A0A0A0;" class="container">
 			<header class="header row">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 					<div class="container-fluid">
 						<a class="navbar-brand" href="#">
-							<img src="images/logo/LWP_Logo.png" alt="" width="65%"  class="d-inline-block align-text-top">
+							<img src="images/LWP_Logo(Hat).png" alt="" width="25%"  class="d-inline-block align-text-top">
 						</a>
 						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
 								aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,17 +85,76 @@
 			</header>
 
 			<main class="row">
-				<h4>Autenticando Usuario</h4>
+	
 			<div>
-				<label for="txtEmail">Correo electrónico:</label><br>
-				<input type="text" id="txtEmail" required autofocus><br><br>
+				
+				<div class="container-fluid ">
+					<div class="row ">
+					  <div class="col col-3"></div>
+					  <!--Card where there is the content to login-->
+					  <div class="col col-7 ">
+						<div class="card rounded-4"
+						  style=" margin: auto; margin-top: 5%; padding-left: 15%; padding-right: 15%; margin-left: 9%; margin-right: 9%;">
+						  <!--Card Body-->
+						  <div class="card-body">
+							<form class="BG">
+							  <div class="mb-3 ">
+								<!--Img of the companny-->
+																  <button style="background-color: white; border: none;" class="buttonX" type="button">
+									
+									</svg>
+								  </button>
 
-				<label for="txtContra">Contraseña:</label><br>
-				<input type="password" id="txtContra" required>
-				<br><br>
-				<input type="button" id="btnLogin" name="btnLogin" value="Auntenticar Usuario">
+								  
+								</a>
+								<!--Tittle of the card-->
+								<p style="font-size: 40px;" class="fw-bold pb-">Iniciar sesión en LWP</p>
+				
+								<!--Option Buttons to Log in-->
+								<a style="display: block;" href="https://accounts.google.com/login?hl=es">
+								  <button style="border-color: #A0A0A0;" type="button" class="rounded-5 form-control btn  mb-3"><img
+									  src="Images/google-icon.png" height="20"> Iniciar sesión con Google
+								  </button>
+								</a>
+								<a style="display: block;" href="https://es-la.facebook.com/login/device-based/regular/login/">
+								  <button style="border-color: #A0A0A0;" type="button"
+									class="rounded-5 form-control btn btn-Facebook mb-3 bi bi-facebook ">  Iniciar sesión con
+									Facebook</button>
+				
+								</a>
+								<div class="loader"></div>
+								<!--Input holders-->
+								<!------------------------------------------------------------------------------------------>
+								<input id="txtEmail" placeholder="Correo electronico" type="text"
+								  class="mb-3 form-control bg-body-secondary rounded-2" required autofocus>
+				
+								<input id="txtContra" placeholder="Contraseña" type="password"
+								  class="mb-3 form-control bg-body-secondary rounded-2" required>
+								<!------------------------------------------------------------------------------------------>
+
+
+								<!--Button to log in-->
+								<a style="display: block;" href="/LWP/Modules/Modulos_Aprendizaje_Main.html">
+								  <button
+									style="border-color: #A0A0A0; color: white; background-color: #3E4AB8;" type="button"id="btnLogin"
+									name="btnLogin" value="Auntenticar Usuario" class=" rounded-5 form-control btn  mb-3 "> Siguiente</button>
+								</a>
+
+								<!--Button to Register instead of login-->                
+								<p style="text-align: center;">¿No tienes una cuenta? <a href="register.html"
+									style="text-decoration: none;">Regístrate ahora!</a></p>
+							</form>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-3"></div>
+				  </div>
 			</div>
 			</main>
+
+
+
 
 			<footer class="row">
 
