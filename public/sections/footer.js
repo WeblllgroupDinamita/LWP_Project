@@ -26,7 +26,7 @@ class Footer extends HTMLElement{
         <div class="col col-md-1"></div>
         <div class="col col-md-1"></div>
     </div>
-    <!--Copyright Section-->
+    <!--Copyright Sectionn-->
     <div id="copyR">
         <hr
             style="width: 65%; margin: 50px 0px 0px 19%; height: 1px ;border:none;color:black;background-color:black;">
