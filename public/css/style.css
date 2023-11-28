@@ -49,3 +49,14 @@ body{
     text-align: center;
     width: 160px;
 }
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 30vh; /* O ajusta la altura según tus necesidades */
+}
+
+.logo-image {
+    width: 400px;
+    height: 100px;
+}
