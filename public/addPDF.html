@@ -1,94 +1,79 @@
 <!doctype html>
-		<html lang="en">
-		<head>
-			<!-- Visualization environment -->
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+<head>
+    <!-- Visualization environment -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Control environment web application -->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta value="no-cache, no-store, must-revalidate" name="no-chache">
 
-			<!-- Control environment web application -->
-			<meta http-equiv="pragma" content="no-cache">
-			<meta http-equiv="cache-control" content="no-cache">
-			<meta value="no-cache, no-store, must-revalidate" name="no-chache">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
 
-			<!-- Bootstrap CSS -->
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-				  rel="stylesheet"
-				  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-				  crossorigin="anonymous">
+    <!-- Font awesome decoration -->
+    <script src="https://kit.fontawesome.com/2c7bfef965.js" crossorigin="anonymous"></script>
 
-			<!-- Font awesome decoration -->
-			<script src="https://kit.fontawesome.com/2c7bfef965.js" crossorigin="anonymous"></script>
+    <!-- Custom decoration -->
+    <title>Welcome to Firebase Hosting</title>
+    <link rel="stylesheet" href="css/style.css">
+ 
 
-			<!-- Custom decoration -->
-			<title>Welcome to Firebase Hosting</title>
-			<link rel="stylesheet" href="css/style.css">
+    <!-- call menu and footer sections -->
+    <script src="sections/menu.js" defer></script>
 
-			<!-- References Firebase libraries -->
-			<!-- update the version number as needed -->
-			<script defer src="/__/firebase/9.17.2/firebase-app-compat.js"></script>
-			<script defer src="/__/firebase/9.17.2/firebase-auth-compat.js"></script>
-			<script defer src="/__/firebase/9.17.2/firebase-database-compat.js"></script>
-			<script defer src="/__/firebase/9.17.2/firebase-firestore-compat.js"></script>
-			<script defer src="/__/firebase/9.17.2/firebase-storage-compat.js"></script>
+    <!-- References Firebase libraries -->
+    <!-- update the version number as needed -->
+   <!-- update the version number as needed -->
+<script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
+<script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
+<script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
+<script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
+<!-- initilized firebase object -->
+<script defer src="/__/firebase/init.js"></script>
+</head>
+<body class="container">
+    <header class="header row">
+        <menu-component></menu-component>
+    </header>
 
-			<!-- initilized firebase object -->
-			<script defer src="/__/firebase/init.js"></script>
-			<!-- calling user authentication functions -->
-			<script defer src="js/Users/isLogin.js"></script>
+    <main class="row">
+		<div class="image-container">
+			<img src="images/LWP_Logo.png" alt="Logo" class="logo-image">
+		</div>
+		<p style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 20px;" class="mb-5">Para subir los documentos PDF a los diferentes modulos, porfavor presione el siguiente boton y selecciona un documento PDF</p>
+  
 
-		</head>
-		<body class="container" onload="validar()">
-			<header class="header row">
-				<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-					<div class="container-fluid">
-						<a class="navbar-brand">Horoscopo</a>
-						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-								aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse" id="navbarNavDropdown">
-							<ul class="navbar-nav">
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_01" role="button" data-bs-toggle="dropdown"
-									   aria-expanded="false">
-										Horoscopo
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_01">
-										<li><a class="dropdown-item" href="lista.html">Lista de signos</a></li>
-										<li><a class="dropdown-item" href="agregar.html">Agregar signo</a></li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_02" role="button" data-bs-toggle="dropdown"
-									   aria-expanded="false">
-										Usuarios
-									</a>
-									<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_02">
-										<li><a class="dropdown-item" href="registrar.html">Registrar nuevo usuario</a></li>
-										<li><a class="dropdown-item" href="login.html">Autenticar usuario</a></li>
-										<li><a class="dropdown-item" onclick="salir()">Cerrar sesión</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</header>
+		<div style="text-align: center;">
+			<input style="width: 300px;margin-left: 100px;" type="file" name="txtPDF" id="txtPDF">
+			<br> <br>
+			<input type="button" name="btnLoad" id="btnLoad" value="Subir archivo" /> 
 
-			<main class="row">
-				
-			</main>
+		<!--	<button onclick="llenado" type="button" name="btnLoad" id="btnLoad"class="btn btn-primary">Subir archivo"</button>-->
 
-			<footer class="row">
+			 <!--<input  type="button" name="btnLoad" id="btnLoad" value="Subir archivo" /> -->
+		   </div>
+		   
+<script defer src="/__/firebase/init.js"></script>
 
-			</footer>
-			<!-- Option 1: Bootstrap Bundle with Popper -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-					integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-					crossorigin="anonymous"></script>
-		</body>
-		</html>
+
+<!--ACTIVAR EL LOGIN-->
+<!-- <script defer src="js/user/isLogin.js"></script>-->
+	</main>
+
+    <footer class="row">
+        <footer-component></footer-component>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+</html>
