@@ -1,3 +1,9 @@
+// JavaScript Document
+// create local database firestore variable
+var db = firebase.apps[0].firestore();
+var auth = firebase.apps[0].auth();
+var container = firebase.apps[0].storage().ref();
+
 // create local from webpage inputs
 const txtNombre = document.querySelector('#txtNombre');
 const txtEmail = document.querySelector('#txtEmail');
@@ -19,7 +25,7 @@ btnInsUser.addEventListener('click', function () {
         const metadata = {
             contentType: archivo.type
         };
-        const subir = container.child('userPhotos/' + nomarch).put(archivo, metadata);
+        const subir = container.child('estudents/' + nomarch).put(archivo, metadata);
         subir.then(snapshot => snapshot.ref.getDownloadURL())
             .then(url => {
                 // Crear usuario con email y contraseña
