@@ -17,5 +17,12 @@ service cloud.firestore {
     allow update: if false;
     allow delete: if false;
   }	
+   match /{documentsPDF}/{document=**}{
+    allow read:if true;
+    allow create: if request.resource.data.names is string &&
+              request.resource.data.url is string;
+    allow update: if false;
+    allow delete: if false;
+  }	
   }
 }
