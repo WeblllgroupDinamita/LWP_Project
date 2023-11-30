@@ -24,6 +24,9 @@ class Menu extends HTMLElement{
                     <a class="nav-link" href="multimedia.html">Multimedia</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link" href="addPDF.html">PDF's</a>
+            </li>
+                <li class="nav-item">
                     <a class="nav-link" href="sugestions.html">Sugerencias</a>
                 </li>
                 <li class="nav-item dropdown">
