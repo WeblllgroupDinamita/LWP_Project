@@ -15,12 +15,12 @@ btnLogin.addEventListener('click', function () {
                 .then(function (querySnapshot) {
                     querySnapshot.forEach(function (doc) {
                         // Aquí se guarda la URL de la foto en el almacenamiento local
-                        localStorage.setItem('userPhotoURL', doc.data().urlPhoto);
-                        localStorage.setItem('userName', doc.data().usuario);
+                        // localStorage.setItem('userPhotoURL', doc.data().urlPhoto);
+                        // localStorage.setItem('userName', doc.data().usuario);
                         doc.ref.update({ultAcceso: dt}).then(function () {
-                            document.getElementById('userName').textContent = doc.data().usuario;
+                            // document.getElementById('userName').textContent = doc.data().usuario;
                             // Redirección a 'index.html' después de guardar la URL de la foto
-                            document.location.href = 'index.html';
+                            document.location.href = 'AllModules.html';
                         });
                     });
                 })

@@ -2,9 +2,9 @@
 const txtNombre = document.querySelector('#txtNombre');
 const txtEmail = document.querySelector('#txtEmail');
 const txtContra = document.querySelector('#txtContra');
-const txtUrlPhoto = document.querySelector('#txtUrlPhoto');
-const txtGradoAcademico = document.querySelector('#txtGradoAcademico');
-const txtDescripcion = document.querySelector('#txtDescripcion');
+const txtUrlPhoto = document.querySelector('#txtArchi');
+const txtGradoAcademico = document.querySelector('#txtSchoolGrade');
+const txtDescripcion = document.querySelector('#txtWhoAmI');
 
 // create local insert button
 const btnInsUser = document.querySelector('#btnInsUser');
