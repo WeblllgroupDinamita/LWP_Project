@@ -1,8 +1,16 @@
+// JavaScript Document
+// create local database firestore variable
+var db = firebase.apps[0].firestore();
+var auth = firebase.apps[0].auth();
+
+
 const txtEmail = document.querySelector('#txtEmail');
 const txtContra = document.querySelector('#txtContra');
 
 // create local insert button
 const btnLogin = document.querySelector('#btnLogin');
+const btnGoogle = document.querySelector('#googleSign');
+const btnFacebook = document.querySelector('#facebookLogin');
 
 
 // assign button listener
@@ -40,5 +48,38 @@ btnLogin.addEventListener('click', function () {
             });
         });
 });
+
+//Auth With google
+btnGoogle.addEventListener('Click', e=>{
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+        .then(result =>{
+            console.log("Google Sign in")
+            console.log(result)
+
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+})
+
+
+//Auth With facebook
+btnGoogle.addEventListener('Click', e=>{
+    e.preventDefault();
+    const provider = new firebase.auth.FacebookAuthProvider();
+    auth.signInWithPopup(provider)
+        .then(resutl =>{
+            console.log("Facebook Sign in")
+            console.log(result)
+
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+
+
+
+})
 
 
