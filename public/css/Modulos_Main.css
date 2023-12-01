@@ -1,0 +1,126 @@
+/*Page where we get the letter type*/
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+
+.logo{
+    display: flex;
+    height: 30px;
+}
+
+/*Style for header*/
+header{
+    background-color: #3E4AB8;
+    margin: 0;
+}
+/*Style for the logo*/
+.log_lwp{
+    width: 60px;
+    height: 60px;
+}
+
+.hexagon {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagon button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-style: dotted;
+    background-color: #fff;
+    color: #007bff;
+    font-size: 18px;
+}
+
+    .contenedor figure{
+    position:relative;
+        cursor: pointer;
+    /*  overflow: hidden;  /*esto*/
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.50);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    .contenedor figure img{
+        width: 100%;
+        height: 100%;
+        transition: all 400ms ease-out;
+        will-change: transform;
+    }
+    .contenedor figure .capa{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10,50,90,.7);
+        transition: all 400ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+    text-align: center;
+    }
+    .contenedor figure:hover > .capa {
+        opacity: 1;
+        visibility: visible;
+    }
+    .contenedor figure:hover > .capa h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    .contenedor figure:hover > img{
+        transform: scale(1.3);
+    }
+    .contenedor figure .capa h3{
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 120px;
+        transition: all 400ms ease-out;
+        margin-top: 30px;
+    }
+    .contenedor figure .capa p{
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto;
+
+    }
+    
+    .primero{
+        width: 100%;
+        height: 550px;
+        background: #bc4e9c;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(0, 0%, 0%, 0.473), hsla(320, 88%, 48%, 0.204)), url(../Images/modulosFondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(0, 93%, 24%, 0.612), hsla(0, 0%, 0%, 0)), url(../Images/modulosFondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+    
+    }
+
+    .texto-imagen{
+        display: flex;
+        height: 200px;
+        width: 1000px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 30px;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+    footer{
+        background-color: white;
+    }
