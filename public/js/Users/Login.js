@@ -50,7 +50,8 @@ btnLogin.addEventListener('click', function () {
 });
 
 //Auth With google
-btnGoogle.addEventListener('Click', e=>{
+btnGoogle.addEventListener('click', e=>{
+    e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
         .then(result =>{
@@ -65,7 +66,7 @@ btnGoogle.addEventListener('Click', e=>{
 
 
 //Auth With facebook
-btnGoogle.addEventListener('Click', e=>{
+btnGoogle.addEventListener('click', e=>{
     e.preventDefault();
     const provider = new firebase.auth.FacebookAuthProvider();
     auth.signInWithPopup(provider)
