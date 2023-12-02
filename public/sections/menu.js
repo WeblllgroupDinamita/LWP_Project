@@ -21,16 +21,13 @@ class Menu extends HTMLElement{
                     <a class="nav-link" href="contact.html">Contactos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="multimedia.html">Multimedia</a>
-                </li>
-                <li class="nav-item">
                 <a class="nav-link" href="addPDF.html">PDF's</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="ModulePDF.html">Modulos</a>
         </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sugestions.html">Sugerencias</a>
+                    <a class="nav-link" href="suggestions.html">Sugerencias</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_02" role="button" data-bs-toggle="dropdown"
