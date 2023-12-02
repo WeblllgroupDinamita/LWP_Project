@@ -100,3 +100,7 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+.indexPage{
+    background-image: url(/public/images/modulosFondo.jpg);
+}
+
