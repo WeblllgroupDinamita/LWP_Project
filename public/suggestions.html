@@ -1,0 +1,172 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Visualization environment -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Control environment web application -->
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta value="no-cache, no-store, must-revalidate" name="no-chache">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+
+        <!-- Font awesome decoration -->
+        <script src="https://kit.fontawesome.com/2c7bfef965.js" crossorigin="anonymous"></script>
+
+        <!-- Custom decoration -->
+        <title>Sugerencias</title>
+        <link rel="stylesheet" href="/public/css/Suggestion.css">
+
+        <!-- call menu and footer sections -->
+        <script src="sections/menu.js" defer></script>
+        <script src="sections/footer.js" defer></script>
+
+
+        <!-- References Firebase libraries -->
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.17.2/firebase-app-compat.js"></script>
+        <script defer src="/__/firebase/9.17.2/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.17.2/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.17.2/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.17.2/firebase-storage-compat.js"></script>
+
+        <!-- initilized firebase object -->
+        <script defer src="/__/firebase/init.js"></script>
+
+    </head>
+    <body class="container">
+        <header class="header row">
+            <menu-component></menu-component>
+        </header>
+
+        <main class="row">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col col-3"></div>
+                    <div class="col col-6 ">
+                    <div class="card rounded-4"
+                        style=" margin: auto; margin-top: 2%; margin-bottom: 2%; padding-left: 10%; padding-right: 10%; margin-left: 9%; margin-right: 9%;">
+                    <!--Body of the -->
+                        <div class="card-body">
+                        <form class="BG">
+                            <div class="mb-3 ">
+                            <!--Logo Hat-->
+                            <img class="logoImg mb-4" src="/Images/LWP_Logo(Hat).png" width="40" height="35" />
+                            <div class="loader"></div>
+            
+                            <a style="display: block;" href="/InfoPage/login.html">
+                                <button style="background-color: white; border: none;" class="buttonX" type="button">
+                                <svg viewBox="0 0 16 16" width="16" height="16">
+                                    <path
+                                    d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z">
+                                    </path>
+                                </svg>
+                                </button>
+                            </a>
+                            <img class="logoImg mb-4 form-control" src="/Images/sugerencia.JPG"  height="70" />
+                            <input type="text" id="username" placeholder="Nombre de usuario" class="form-control mb-4"
+                                maxlength="50" style="height:50px" required>
+            
+            
+                            <input type="email" placeholder="Correo electronico" id="Gmail" class="form-control mb-4"
+                                style="height:50px" required>
+            
+                                <select class="input form-control" name="Brand" id="temas">
+                                    <option value="1">Actividades de escrituras</option>
+                                    <option value="2">Temario</option>
+                                    <option value="3">Interacción</option>
+                                    <option value="4">Material</option>
+                                    <option value="6">Juegos</option>
+                                    <option value="7">Otra</option>
+                                </select>
+                                <div class="mb-4"></div>
+                        
+            
+            
+                            <section>
+                                <div class="row">
+                                <!--Option Form to select the month-->
+                                <div class="col-5">
+                                    <form>
+                                    <select style="height:50px ;" id="mes" name="mes" class="rounded-1 form-control">
+                                        <option value="">Mes</option>
+                                        <option value="01">Enero</option>
+                                        <option value="02">Febrero</option>
+                                        <option value="03">Marzo</option>
+                                        <option value="04">Abril</option>
+                                        <option value="05">Mayo</option>
+                                        <option value="06">Junio</option>
+                                        <option value="07">Julio</option>
+                                        <option value="08">Agosto</option>
+                                        <option value="09">Septiembre</option>
+                                        <option value="10">Octubre</option>
+                                        <option value="11">Noviembre</option>
+                                        <option value="12">Diciembre</option>
+                                    </select>
+                                    </form>
+                                </div>
+                                <div class="col-3">
+                                    <!--Input to select the day-->
+                                    <select id="dia" name="dia" class="rounded-1 form-control" style="height:50px ;">
+                                    <option value="">Día</option>
+                                    <script>
+                                        for (let i = 1; i <= 31; i++) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                    </select>
+                                </div>
+                                <!--Input to select the year-->
+                                <div class="col-4">
+                                    <select id="ahno" name="anio" class="rounded-1 form-control" style="height:50px ;">
+                                    <option value="">Año</option>
+                                    <script>
+                                        const anioActual = new Date().getFullYear();
+                                        for (let i = anioActual; i >= anioActual - 100; i--) {
+                                        document.write(`<option value="${i}">${i}</option>`);
+                                        }
+                                    </script>
+                                    </select>
+                                </div>
+            
+                                </div>
+                            </section>
+                            <hr>
+                            <div class="input">
+                                <label for="Color">Descripción</label>
+                                <textarea class="form-control mb-4"name="Description"id=texto cols="10" rows="5"></textarea>     
+                            </div>
+            
+                            <!--Button to continue-->
+                            <a style="display: block;" href="/InfoPage/main.html">
+                                <button onclick="return validarSignUp()"
+                                style="border-color: #A0A0A0; color: white; background-color: #3E4AB8;" type="button"
+                                class=" rounded-5 form-control btn  mb-3 "> Siguiente</button>
+                            </a>                
+                        </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col col-3"></div>
+                </div>
+            
+                <script src="js/animacionCarga.js"></script>
+        </main>
+
+        <footer class="row">
+            <footer-component></footer-component>
+        </footer>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+    </body>
+    </html>

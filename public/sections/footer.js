@@ -26,11 +26,11 @@ class Footer extends HTMLElement{
         <div class="col col-md-1"></div>
         <div class="col col-md-1"></div>
     </div>
-    <!--Copyright Section-->
+    <!--Copyright Sectionn-->
     <div id="copyR">
         <hr
             style="width: 65%; margin: 50px 0px 0px 19%; height: 1px ;border:none;color:black;background-color:black;">
-        <p class="fst-italics" style="padding-top: 20px;">Copyright @2023 Todos los derechos Reservados a LWP</p>
+        <p class="fst-italics" style="padding-top: 20px; text-align: center;">Copyright @2023 Todos los derechos Reservados a LWP</p>
     </div>` 
     }     
 }
