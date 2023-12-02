@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cardElement.style.marginBottom = '10px';  // Optional margin between cards
                 cardElement.innerHTML = `
                     <iframe src="${url}" class="card-img-top" style="width: 100%; height: 200px;"></iframe>
-                    <div class="card-body text-center" style="height: 100px;"> <!-- Set the height of card-body -->
+                    <div class="SelectedPDF" class="card-body text-center" style="height: 100px;"> <!-- Set the height of card-body -->
                         <p class="card-text">${nombre}</p>
                         <a href="${url}" download="${nombre}" class="btn btn-primary rounded-4" style="background-color: #6d20b9;">Visualizar</a>
                     </div>
@@ -36,7 +36,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     spacerElement.style.flexBasis = '100%';  // Start a new row after every fourth item
                     divPDFs.appendChild(spacerElement);
                 }
+                // Añadir evento de clic
+                cardElement.querySelector('.SelectedPDF').addEventListener('click', function() {
+                    var docId = this.getAttribute('doc.id');
+                    window.location.href = `comentarios.html?docid=${docId}`; // Redireccionar a la página de comentarios con el id del documento
+                });
             });
+            
         }).catch(function(error) {
             console.log("Error al obtener los documentos: ", error);
         });

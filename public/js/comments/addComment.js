@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 })
                 .then(function(){
                     alert
-                    window.location.href = 'englishModule.html';
+                    window.location.href = 'ModulePDF .html';
                 })
             });
         }
