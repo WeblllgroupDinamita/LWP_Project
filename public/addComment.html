@@ -39,7 +39,7 @@
 
 			<!-- initilized firebase object -->
 			<script defer src="/__/firebase/init.js"></script>
-			<script defer src="../js/Users/isLogin.js"></script>
+			<script defer src="js/Users/isLogin.js"></script>
 		</head>
 		<body class="container" onload="validar()">
 			<header class="header row">
@@ -47,6 +47,8 @@
 			</header>
 
 			<main class="row">
+				<div id="commentsContainer" style="margin-bottom: 20px;"></div>
+
 				<form action="/submit-comment" method="post">
                     <label for="subject">Asunto:</label><br>
                     <input type="text" id="subject" name="subject"><br><br>
@@ -65,7 +67,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 					integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 					crossorigin="anonymous"></script>
-			<script defer src="js/comments/addComment.js"></script>
+			<script defer src="js/comments/showComments.js"></script>
 					
 		</body>
 		</html>
