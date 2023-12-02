@@ -1,0 +1,357 @@
+<!doctype html>
+		<html lang="en">
+		<head>
+			<!-- Visualization environment -->
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+			<!-- Control environment web application -->
+			<meta http-equiv="pragma" content="no-cache">
+			<meta http-equiv="cache-control" content="no-cache">
+			<meta value="no-cache, no-store, must-revalidate" name="no-chache">
+
+			<!-- Bootstrap CSS -->
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+				  rel="stylesheet"
+				  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+				  crossorigin="anonymous">
+
+			<!-- Font awesome decoration -->
+			<script src="https://kit.fontawesome.com/2c7bfef965.js" crossorigin="anonymous"></script>
+
+			<!-- Custom decoration -->
+			<title>Welcome to Firebase Hosting</title>
+			<link rel="stylesheet" href="css/style.css">
+
+			<!-- call menu and footer sections -->
+            <script src="sections/menu.js" defer></script>
+            <script src="sections/footer.js" defer></script>
+
+			<!-- References Firebase libraries -->
+			<!-- update the version number as needed -->
+            <!--
+			<script defer src="/__/firebase/9.17.2/firebase-app-compat.js"></script>
+			<script defer src="/__/firebase/9.17.2/firebase-auth-compat.js"></script>
+			<script defer src="/__/firebase/9.17.2/firebase-database-compat.js"></script>
+			<script defer src="/__/firebase/9.17.2/firebase-firestore-compat.js"></script>
+			<script defer src="/__/firebase/9.17.2/firebase-storage-compat.js"></script>-->
+
+			<!-- initilized firebase object -->
+			<!--<script defer src="/__/firebase/init.js"></script>-->
+		</head>
+		<body class="container">
+			<header class="header row">
+				<menu-component></menu-component>
+			</header>
+            <br>
+            <br>
+            <br>
+            <br>
+			<main class="row">
+			<h4 class="entidad">Entidades</h4>
+            <br>
+            <h6 class="entidad">Aqui se encuentran todas aquellas entidades que nos acreditan en nuestra labor de la enseñanza hacía los más pequeños.</h6>
+			<br>
+            <br>
+            <br>
+            <img class="img-mep" src="images/mep.jpg" alt="">   
+            <br>
+            <br>
+            <br>
+            <!--Actividades del MEP-->
+
+            <div class="p-3 row color-f ">
+                <br>
+                <div class="col-12">
+                    <h5 class="h5">Actividades</h5>
+                </div>
+                
+                <!--IMG1-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf1">
+                    <div><img class="imgris img-tam" src="images/reunion.jpg">
+                    </div>
+                    <div>
+                        <p class="txtParr">Junta colaborativa para <br> buscar y llegar a acuerdos que satisfagan <br> las necesidades del equipo.</p>
+                    </div>
+                </div>
+                <!-- Ventana1 -->
+                <div class="modal fade" id="mf1" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Reuniones</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/reunion.jpg">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                                Planificación y Coordinación: Las reuniones pueden estar
+                                                destinadas a la planificación y coordinación de políticas educativas a nivel 
+                                                nacional o regional. Los representantes del MEP pueden discutir estrategias, 
+                                                establecer objetivos y coordinar acciones para mejorar el sistema educativo.</p>                        
+                                            <p class="parrProfes">
+                                                Evaluación de Programas: Las reuniones también pueden utilizarse para evaluar 
+                                                y revisar programas educativos existentes. Se pueden discutir los resultados 
+                                                de iniciativas anteriores, identificar áreas de mejora y ajustar políticas según 
+                                                sea necesario.
+                                            </p>
+                                            <p class="parrProfes">
+                                                Seguimiento y Evaluación: Las reuniones pueden ser utilizadas para realizar un 
+                                                seguimiento y evaluar el progreso hacia metas educativas específicas. Esto implica 
+                                                revisar datos, analizar indicadores de rendimiento y ajustar estrategias según 
+                                                sea necesario.
+                                            </p>           
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div>
+                
+                <!--IMG2-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf2">
+                    <div><img class="imgris img-tam" src="images/mep-01.png">
+                    </div>
+                    <div>
+                        <p class="txtParr">Día Internacional del Juego</p>
+                    </div>
+                </div>
+                <!-- Ventana2 -->
+                <div class="modal fade" id="mf2" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Actividades</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/mep-01.png">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                                Cada año, en nivel internacional, se celebra este Día del Juego, 
+                                                con el objetivo de reflexionar el derecho que tienen las niñas y 
+                                                los niños al descanso, al esparcimiento, a los juegos y actividades 
+                                                recreativas que vayan acorde a su edad, además de libertad que tienen 
+                                                para introducirse al mundo del arte y la cultura.</p>                         
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div> 
+               
+                <!--IMG3-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf3">
+                    <div><img class="imgris img-tam" src="images/mep-02.png">
+                    </div>
+                    <div>
+                        <p class="txtParr">Día de las culturas</p>
+                    </div>
+                </div>
+                <!-- Ventana3 -->
+                <div class="modal fade" id="mf3" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Actividades</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/mep-02.png">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                                Para enaltecer el carácter pluricultural y multiétnico del pueblo costarricense propiciando la conmemoración de
+                                                 los valores y la herencia cultural de las poblaciones culturalmente diversas en la idiosincrasia costarricense, 
+                                                 cada año, se conmemora este Día de las Culturas, según la Ley N° 7426, desde 1994. A través de esta conmemoración, 
+                                                 se propicia que en las instituciones educativas se reflexione acerca de la memoria histórica, del carácter 
+                                                 pluricultural y multiétnico de la sociedad costarricense y de los valores inherentes a su reconocimiento y respeto 
+                                                 como tradicionalmente se ha hecho.
+
+                                                Para lograr lo anterior, se propone lo siguiente: <br>
+                                                • Fomentar el diálogo intercultural entre las personas estudiantes para el establecimiento 
+                                                de relaciones de sana convivencia, respeto y aprecio hacia las diferencias. <br>
+                                                • Promover el respeto, el fortalecimiento de tradiciones, costumbres, valores de los diferentes
+                                                 grupos culturales y étnicos que componen la idiosincrasia costarricense. <br>
+                                                • Propiciar la visibilización de los aportes de los diferentes grupos culturales y étnicos en 
+                                                la construcción de la Nación costarricense y sus contribuciones económicas, políticas y sociales 
+                                                al desarrollo del país. <br>
+                                                • Reconocer los lazos históricos y culturales que vinculan a las diferentes nacionalidades 
+                                                con la sociedad costarricense.</p>                         
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div> 
+            </div>
+            <!----------------------------------------------------------------------->   
+             
+            <!--Actividades del INA-->
+            <br>
+            <br>
+            <img class="img-mep" src="images/INA.png" alt="">  
+
+             <div class="p-3 row color-f1 ">
+                <br>
+                <div class="col-12">
+                    <h5 class="h5">Actividades</h5>
+                </div>
+                
+                <!--IMG1-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf4">
+                    <div><img class="imgris img-tam" src="images/ina-01.png">
+                    </div>
+                    <div>
+                        <p class="txtParr">Oferta de cursos.</p>
+                    </div>
+                </div>
+                <!-- Ventana1 -->
+                <div class="modal fade" id="mf4" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Actividades</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/ina-01.png">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                                Para más información de los cursos, horarios, fechas, requisitos y modalidades, 
+                                                acércate a las instalaciones del INA o contactanos a los teléfonos que se 
+                                                indican en la imagen.
+                                                ¡Te esperamos! 😉</p>                                
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div>
+                
+                <!--IMG2-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf5">
+                    <div><img class="imgris img-tam" src="images/ina-02.png">
+                    </div>
+                    <div>
+                        <p class="txtParr">Servicios</p>
+                    </div>
+                </div>
+                <!-- Ventana2 -->
+                <div class="modal fade" id="mf5" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Actividades</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/ina-02.png">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                                Becas para estudiantes INA <br>
+                                                ¿Cómo solicitar la ayuda económica? <br>
+                                                ¿Qué beneficios se pueden solicitar? <br>
+                                                -Podés solicitar una beca INA para: <br>
+                                                -Becas para estudiantes externos <br>
+                                                ¿Quiénes pueden obtener la beca? <br>
+                                                ¿Cómo pueden solicitar la beca? <br>
+                                                -Requisitos <br>
+                                                -Duración <br>
+                                                -Cancelación <br>
+                                            </p>                         
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div> 
+               
+                <!--IMG3-->
+                <div tabindex="0" class="divper m-3" data-toggle="modal" data-target="#mf6">
+                    <div><img class="imgris img-tam" src="images/ina-03.jpg">
+                    </div>
+                    <div>
+                        <p class="txtParr">Plataformas</p>
+                    </div>
+                </div>
+                <!-- Ventana3 -->
+                <div class="modal fade" id="mf6" tabindex="-1"  aria-hidden="true">   
+                    <div class="modal-dialog">      
+                        <div class="modal-content">         
+                            <div class="modal-header">            
+                                <h5 class="modal-title">Actividades</h5>         
+                            </div>         
+                                <div class="modal-body">            
+                                    <div class="media">
+                                        <img class="mr-1 img-tam" src="images/ina-03.jpg">               
+                                        <div class="media-body">	               
+                                            <p class="parrProfes">
+                                            El ina cuenta con Plataformas de Academia Cisco, Microsoft y INA Virtual.
+                                            </p>                         
+                                        </div>            
+                                    </div>         
+                                </div>         
+                                <div class="modal-footer">            
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>         
+                                </div>      
+                            </div>   
+                        </div>
+                </div> 
+            </div>
+            
+            <!----------------------------------------------------------------------->
+
+            <h4 class="formatHead">Almacenar Imágenes con datos</h4>
+			<div>
+				<label for="txtPosic">Posición:</label><br>
+				<input type="text" id="txtPosic"><br><br>
+			
+				<label for="txtDescrip">Descripción:</label><br>
+				<input type="text" id="txtDescrip"><br><br>
+
+				<label for="txtArchi">File:</label><br>
+				<input type="file" id="txtArchi">
+				<br><br>
+				<input type="button" id="btnLoad" name="btnLoad" value="Insert">
+			</div>	
+            </main>
+
+			<footer class="row">
+				<footer-component></footer-component>
+			</footer>
+			<!-- Option 1: Bootstrap Bundle with Popper -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+					integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+					crossorigin="anonymous">
+            </script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            
+            <script>
+                $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover();
+                });
+                
+            </script>
+            
+    
+		</body>
+		</html>
