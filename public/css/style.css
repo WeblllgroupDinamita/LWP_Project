@@ -52,6 +52,8 @@ body{
     width: 160px;
 }
 
+
+
 .image-container {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
@@ -103,4 +105,3 @@ input[type="submit"]:hover {
 .indexPage{
     background-image: url(/public/images/modulosFondo.jpg);
 }
-
