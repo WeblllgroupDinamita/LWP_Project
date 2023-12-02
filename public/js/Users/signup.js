@@ -25,7 +25,8 @@ btnInsUser.addEventListener('click', function () {
         const metadata = {
             contentType: archivo.type
         };
-        const subir = container.child('estudents/' + nomarch).put(archivo, metadata);
+        console.log(metadata)
+        const subir = container.child('estudents/'+ nomarch).put(archivo, metadata);
         subir.then(snapshot => snapshot.ref.getDownloadURL())
             .then(url => {
                 // Crear usuario con email y contraseña
