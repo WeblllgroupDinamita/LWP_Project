@@ -59,6 +59,8 @@ btnSend.addEventListener('click', function(){
         else {
         // El documento no existe.
         console.log("No such document!");
+        window.location.href = 'addComment.html';
+
         }
 })
 });

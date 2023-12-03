@@ -46,12 +46,12 @@ btnLogin.addEventListener('click', function () {
                 text: 'Error de acceso al usuario: ' + error.message,
                 icon: 'error'
             });
-        });
+        });
 });
 
 //Auth With google
-btnGoogle.addEventListener('Click', e=>{
-    const provider = new firebase.auth.GoogleAuthProvider();
+btnGoogle.addEventListener('click', e=>{
+    const provider = new GoogleAuthProvider();
     auth.signInWithPopup(provider)
         .then(result =>{
             console.log("Google Sign in")
@@ -65,9 +65,9 @@ btnGoogle.addEventListener('Click', e=>{
 
 
 //Auth With facebook
-btnFacebook.addEventListener('Click', e=>{
+btnFacebook.addEventListener('click', e=>{
     e.preventDefault();
-    const provider = new firebase.auth.FacebookAuthProvider();
+    const provider = new FacebookAuthProvider();
     auth.signInWithPopup(provider)
         .then(resutl =>{
             console.log("Facebook Sign in")

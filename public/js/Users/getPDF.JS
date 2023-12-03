@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 // Añadir evento de clic
                 cardElement.querySelector('.SelectedPDF').addEventListener('click', function() {
                     var docId = this.getAttribute('doc.id');
-                    window.location.href = `comentarios.html?docid=${docId}`; // Redireccionar a la página de comentarios con el id del documento
+                    window.location.href = `addComment.html?docid=${docId}`; // Redireccionar a la página de comentarios con el id del documento
                 });
             });
             

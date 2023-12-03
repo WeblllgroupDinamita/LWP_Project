@@ -25,7 +25,6 @@ btnInsUser.addEventListener('click', function () {
         const metadata = {
             contentType: archivo.type
         };
-        console.log(metadata)
         const subir = container.child('estudents/'+ nomarch).put(archivo, metadata);
         subir.then(snapshot => snapshot.ref.getDownloadURL())
             .then(url => {
@@ -42,7 +41,7 @@ btnInsUser.addEventListener('click', function () {
                             "descripcion": txtDescripcion.value,
                             "urlPhoto": url
                         }).then(function (docRef) {
-							alert("Usuario agregado satisfactoriamente");
+							alert("Usuario agregado satisfactoriamente" +docRef.id);
 						}).catch(function (FirebaseError) {
 							alert("Error al registrar datos del usuario." + FirebaseError);
 						});
@@ -50,6 +49,6 @@ btnInsUser.addEventListener('click', function () {
 					.catch((error) => {
 						alert("Error al agregar el nuevo usuario: " + error.message);
 					});
-			});
+            });
     }
 });
