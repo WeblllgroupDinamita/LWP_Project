@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 var url = datos.url;
 
                 var cardElement = document.createElement('div');
+                cardElement.setAttribute('data-doc-id', doc.id);
                 cardElement.classList.add('card');
                 cardElement.style.width = 'calc(25% - 10px)';  // Adjust width for four items with space in between
                 cardElement.style.marginBottom = '10px';  // Optional margin between cards
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
                 // Añadir evento de clic
                 cardElement.querySelector('.SelectedPDF').addEventListener('click', function() {
-                    var docId = this.getAttribute('doc.id');
+                    var docId = this.parentNode.getAttribute('data-doc-id');
                     window.location.href = `addComment.html?docid=${docId}`; // Redireccionar a la página de comentarios con el id del documento
                 });
             });
