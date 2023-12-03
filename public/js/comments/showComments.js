@@ -12,7 +12,7 @@ const btnSend = document.querySelector('#sendComment')
 document.addEventListener('DOMContentLoaded', function() {
 const urlParam = new URLSearchParams(window.location.search);
 const docId = urlParam.get('docid')
-
+ 
 function cargarComentarios() {
     var commentsContainer = document.getElementById('commentsContainer');
     db.collection("comentarios") // Reemplaza con el nombre de tu colección de comentarios.
@@ -39,20 +39,21 @@ function cargarComentarios() {
 }
 
 cargarComentarios();
+
 btnSend.addEventListener('click', function(){
     var docRef = firebase.firestore().collection("PDF's_modules").doc(docId)
     docRef.get().then(function(doc) {
         if (doc.exists) {
-        var name = doc.data().names;
-                db.collection("comments").add({
-                    "Asunto": txtAsunto.value,
-                    "Comentario": txtComentario.value,
-                    "PDF": name.value
-                })
-                .then(function(){
-                    alert
-                    window.location.href = 'ModulePDF.html';
-                })
+            var name = doc.data().names;
+            db.collection("comments").add({
+                "Asunto": txtAsunto.value,
+                "Comentario": txtComentario.value,
+                "PDF": name.value
+            })
+            .then(function(docRef){
+                alert("Comentario Subido! " + docRef.id)
+                window.location.href = 'ModulePDF.html';
+            })
         }
         else {
         // El documento no existe.
@@ -62,7 +63,10 @@ btnSend.addEventListener('click', function(){
         }
 })
 });
+
 });
+
+
 
 
 
