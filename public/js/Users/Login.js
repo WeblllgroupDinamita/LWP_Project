@@ -46,36 +46,48 @@ btnLogin.addEventListener('click', function () {
                 text: 'Error de acceso al usuario: ' + error.message,
                 icon: 'error'
             });
-        });
+        });
 });
 
 //Auth With google
-btnGoogle.addEventListener('Click', e=>{
+btnGoogle.addEventListener('click', e=>{
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
         .then(result =>{
-            console.log("Google Sign in")
-            console.log(result)
-
+            const user = result.user;
+            // const credential = GoogleAuthProvider.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
+            alert("Welcome " + user.displayName)
+            document.location.href = 'AllModules.html';
         })
         .catch(err =>{
-            console.log(err)
+            const errorCode = err.code;
+            const errorMessage = err.message;
+            console.log(errorMessage +"Code "+ errorCode);
+            const email = error.customData.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
         })
 })
 
 
 //Auth With facebook
-btnFacebook.addEventListener('Click', e=>{
+btnFacebook.addEventListener('click', e=>{
     e.preventDefault();
     const provider = new firebase.auth.FacebookAuthProvider();
     auth.signInWithPopup(provider)
-        .then(resutl =>{
-            console.log("Facebook Sign in")
-            console.log(result)
-
+        .then(result =>{
+            const user = result.user;
+            // const credential = FacebookAuthProvider.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
+            alert("Welcome " + user.displayName)
+            document.location.href = 'AllModules.html';
         })
         .catch(err =>{
-            console.log(err)
+            const errorCode = err.code;
+            const errorMessage = err.message;
+            console.log(errorMessage + "Code: " + errorCode);
+            const email = error.customData.email;
+            const credential = FacebookAuthProvider.credentialFromError(error);
         })
 
 

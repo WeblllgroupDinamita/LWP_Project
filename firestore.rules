@@ -7,8 +7,7 @@ service cloud.firestore {
                        request.resource.data.usuario is string &&
                        request.resource.data.email is string &&
                        request.resource.data.gradoAcademico is string &&
-                       request.resource.data.descripcion is string &&
-                       request.resource.data.urlPhoto is string;
+                       request.resource.data.descripcion is string;
       allow update: if true;
       allow delete: if false;
   }

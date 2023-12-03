@@ -9,10 +9,10 @@ const txtComentario = document.querySelector('#comment');
 const btnSend = document.querySelector('#sendComment')
 
 
+document.addEventListener('DOMContentLoaded', function() {
 const urlParam = new URLSearchParams(window.location.search);
 const docId = urlParam.get('docid')
 
-document.addEventListener('DOMContentLoaded', function() {
 function cargarComentarios() {
     var commentsContainer = document.getElementById('commentsContainer');
     db.collection("comentarios") // Reemplaza con el nombre de tu colección de comentarios.
@@ -39,8 +39,6 @@ function cargarComentarios() {
 }
 
 cargarComentarios();
-});
-
 btnSend.addEventListener('click', function(){
     var docRef = firebase.firestore().collection("PDF's_modules").doc(docId)
     docRef.get().then(function(doc) {
@@ -59,9 +57,14 @@ btnSend.addEventListener('click', function(){
         else {
         // El documento no existe.
         console.log("No such document!");
+        window.location.href = 'addComment.html';
+
         }
 })
 });
+});
+
+
 
 
 
