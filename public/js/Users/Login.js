@@ -51,15 +51,21 @@ btnLogin.addEventListener('click', function () {
 
 //Auth With google
 btnGoogle.addEventListener('click', e=>{
-    const provider = new GoogleAuthProvider();
+    const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
         .then(result =>{
-            console.log("Google Sign in")
-            console.log(result)
-
+            const user = result.user;
+            // const credential = GoogleAuthProvider.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
+            alert("Welcome " + user.displayName)
+            document.location.href = 'AllModules.html';
         })
         .catch(err =>{
-            console.log(err)
+            const errorCode = err.code;
+            const errorMessage = err.message;
+            console.log(errorMessage +"Code "+ errorCode);
+            const email = error.customData.email;
+            const credential = GoogleAuthProvider.credentialFromError(error);
         })
 })
 
@@ -67,15 +73,21 @@ btnGoogle.addEventListener('click', e=>{
 //Auth With facebook
 btnFacebook.addEventListener('click', e=>{
     e.preventDefault();
-    const provider = new FacebookAuthProvider();
+    const provider = new firebase.auth.FacebookAuthProvider();
     auth.signInWithPopup(provider)
-        .then(resutl =>{
-            console.log("Facebook Sign in")
-            console.log(result)
-
+        .then(result =>{
+            const user = result.user;
+            // const credential = FacebookAuthProvider.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
+            alert("Welcome " + user.displayName)
+            document.location.href = 'AllModules.html';
         })
         .catch(err =>{
-            console.log(err)
+            const errorCode = err.code;
+            const errorMessage = err.message;
+            console.log(errorMessage + "Code: " + errorCode);
+            const email = error.customData.email;
+            const credential = FacebookAuthProvider.credentialFromError(error);
         })
 
 
