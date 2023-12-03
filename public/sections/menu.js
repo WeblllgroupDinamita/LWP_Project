@@ -27,7 +27,7 @@ class Menu extends HTMLElement{
                 <a class="nav-link" href="addPDF.html">PDF's</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="ModulePDF.html">Modulos</a>
+            <a class="nav-link" href="AllModules.html">Modulos</a>
         </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sugestions.html">Sugerencias</a>
