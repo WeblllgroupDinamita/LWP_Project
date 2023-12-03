@@ -1,10 +1,16 @@
+// JavaScript Document
+// create local database firestore variable
+var db = firebase.apps[0].firestore();
+var auth = firebase.apps[0].auth();
+var container = firebase.apps[0].storage().ref();
+
 // create local from webpage inputs
 const txtNombre = document.querySelector('#txtNombre');
 const txtEmail = document.querySelector('#txtEmail');
 const txtContra = document.querySelector('#txtContra');
-const txtUrlPhoto = document.querySelector('#txtUrlPhoto');
-const txtGradoAcademico = document.querySelector('#txtGradoAcademico');
-const txtDescripcion = document.querySelector('#txtDescripcion');
+const txtUrlPhoto = document.querySelector('#txtArchi');
+const txtGradoAcademico = document.querySelector('#txtSchoolGrade');
+const txtDescripcion = document.querySelector('#txtWhoAmI');
 
 // create local insert button
 const btnInsUser = document.querySelector('#btnInsUser');
@@ -19,7 +25,7 @@ btnInsUser.addEventListener('click', function () {
         const metadata = {
             contentType: archivo.type
         };
-        const subir = container.child('userPhotos/' + nomarch).put(archivo, metadata);
+        const subir = container.child('estudents/'+ nomarch).put(archivo, metadata);
         subir.then(snapshot => snapshot.ref.getDownloadURL())
             .then(url => {
                 // Crear usuario con email y contraseña
@@ -35,38 +41,14 @@ btnInsUser.addEventListener('click', function () {
                             "descripcion": txtDescripcion.value,
                             "urlPhoto": url
                         }).then(function (docRef) {
-                            Swal.fire({
-                                title: '¡Registro Completo!',
-                                text: 'ID del registro: ' + docRef.id,
-                                icon: 'success',
-                                confirmButtonText: 'Ok'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    limpiar();
-                                    window.location.href = 'login.html';
-                                }
-                            });
-                        }).catch(function (FirebaseError) {
-                            Swal.fire({
-                                title: 'Error',
-                                text: 'Error al guardar los datos del usuario: ' + FirebaseError,
-                                icon: 'error'
-                            });
-                        });
-                    }).catch((error) => {
-                        Swal.fire({
-                            title: 'Error',
-                            text: 'Error al crear el nuevo usuario:  ' + error.message,
-                            icon: 'error'
-                        });
-                    });
-				}).catch((error) => {
-					Swal.fire({
-						title: 'Error',
-						text: 'Error al subir la imagen: ' + error.message,
-						icon: 'error'
+							alert("Usuario agregado satisfactoriamente" +docRef.id);
+						}).catch(function (FirebaseError) {
+							alert("Error al registrar datos del usuario." + FirebaseError);
+						});
+					})
+					.catch((error) => {
+						alert("Error al agregar el nuevo usuario: " + error.message);
 					});
-				});
-		}
-	});
-
+            });
+    }
+});

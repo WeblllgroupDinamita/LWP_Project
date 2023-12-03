@@ -1,0 +1,157 @@
+.headBlock{
+background-color: #005c81;
+width: 50%;
+height: 60px;
+margin: 5% 0% 0% 25%;
+position: absolute;
+border: 1px solid #91A1AC;
+
+}
+
+.sugestionBlock{
+background-color: white;
+width: 100%;
+position: absolute;
+width: 50%;
+height: 950px;
+margin: 10% 0% 20% 25%;
+border: 1px solid #91A1AC;
+}
+
+p{
+font-family: Century Schoolbook;
+font-size: 14px;
+margin: 0% 2% 0% 2%;
+text-align: justify;
+
+}
+.form{
+position: absolute;
+width:100%;
+height:500px;
+margin-top: none;
+}
+label{
+margin-left: none;
+font-size: 14px;
+margin: 0% 0% 0% 2%;
+text-align: justify;
+}
+
+input{
+width: 70%;
+height: 30px;
+float:right;
+font-size: 14px;
+margin-right: 5%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+select{
+width: 71%;
+height: 30px;
+float:right;
+font-size: 14px;
+margin-right: 5%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+textarea{
+float:right;
+font-size: 14px;
+margin-right: 5%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+font-family: Century Schoolbook;
+background-color: #3E4AB8;
+width: 70%;
+height: 40px;
+margin: 5% 0% 0% 26%;
+color: white;
+font-size: 20px;
+border-radius: 20px;
+
+}
+.footer{
+background-color:  #e2e2e2;
+width: 50%;
+height: 100px;
+margin: 74% 0% 20% 25%;
+position: absolute;
+border: 1px solid #91A1AC;
+}
+.footer1{
+background-color: white;
+width: 100%;
+height: 50px;
+margin: 0% 0% 0% 0%;
+position: absolute;
+
+}
+
+.boxSuggestion{
+position: relative;
+width: 50%;
+height: 500px;
+margin: 5% 25% 25% 25%;
+border: 1px solid skyblue;
+
+}
+.verificationPic{
+background-image: url("/LWP/Images/verification.png"); 
+width:250px;
+height:250px;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+align-items: center;
+margin: 3% 0% 0% 32.5%;
+}
+.boxText{
+width: 100%;
+height: 200px;
+position: absolute;
+margin: 40% 0% 0% 0%;
+}
+h1{
+font-family: Century Schoolbook;
+font-size: 20px;
+margin: 2.5% 2% 0% 2%;
+text-align: center;
+}
+h2{
+font-family: Century Schoolbook;
+font-size: 15px;
+margin: 5% 2% 0% 2%;
+text-align: center;
+}
+h4{
+font-family: Century Schoolbook;
+font-size: 15px;
+margin: 1.5% 2% 0% 2%;
+text-align: center;
+}
+
+ul.nav>li{
+    display: inline;  /* Change the position of the text for inline instead of the block way*/
+    padding: 5px 40px;
+    text-decoration: none;
+    color:white
+}
+ul.nav>li>a{
+    color: inherit; /*it inherits the color of its father*/
+    text-decoration: none; /*it gets rid of the line under the hyperlink*/
+}
+.header{
+width: 50%;
+height: 60px;
+margin: 0% 0% -5% 25%;
+
+
+}
+.pequeña{
+margin: 2.5% 0% 0% 40%;
+float:left
+}

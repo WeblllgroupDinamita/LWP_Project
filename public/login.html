@@ -57,12 +57,16 @@
 					<div class="col col-7 ">
 					<div class="card rounded-4"
 						style=" margin: auto; margin-top: 5%; padding-left: 15%; padding-right: 15%; margin-left: 9%; margin-right: 9%;">
+					<button style="border: none; background: none; position: absolute; top: 10px; right: 20px;"
+						onclick="window.location.href='index.html'">
+					<i class="bi bi-x-lg" style="font-size: 1.5rem;"></i>
+				</button>
 						<!--Card Body-->
 						<div class="card-body">
 						<form class="BG">
 							<div class="mb-3 ">
 							<!--Img of the companny-->
-																<button style="background-color: white; border: none;" class="buttonX" type="button">
+							<button style="background-color: white; border: none;" class="buttonX" type="button">
 			
 								</button>
 
@@ -72,13 +76,11 @@
 							<p style="font-size: 40px;" class="fw-bold pb-">Iniciar sesión en LWP</p>
 			
 							<!--Option Buttons to Log in-->
-							<a style="display: block;" href="https://accounts.google.com/login?hl=es">
-								<button style="border-color: #A0A0A0;" type="button" class="rounded-5 form-control btn  mb-3"><img
+								<button id="googleSign" style="border-color: #A0A0A0;" type="button" class="rounded-5 form-control btn  mb-3"><img
 									src="Images/google-icon.png" height="20"> Iniciar sesión con Google
 								</button>
-							</a>
-							<a style="display: block;" href="https://es-la.facebook.com/login/device-based/regular/login/">
-								<button style="border-color: #A0A0A0;" type="button"
+
+								<button id="facebookLogin" style="border-color: #A0A0A0;" type="button"
 								class="rounded-5 form-control btn btn-Facebook mb-3 bi bi-facebook ">  Iniciar sesión con
 								Facebook</button>
 			
@@ -95,11 +97,10 @@
 
 
 							<!--Button to log in-->
-							<a style="display: block;" href="AllModules.html">
 								<button
 								style="border-color: #A0A0A0; color: white; background-color: #3E4AB8;" type="button"id="btnLogin"
 								name="btnLogin" value="Auntenticar Usuario" class=" rounded-5 form-control btn  mb-3 "> Siguiente</button>
-							</a>
+
 
 							<!--Button to Register instead of login-->                
 							<p style="text-align: center;">¿No tienes una cuenta? <a href="signup.html"
