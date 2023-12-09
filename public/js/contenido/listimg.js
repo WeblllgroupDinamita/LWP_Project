@@ -6,7 +6,7 @@ db.collection("datosImg").orderBy('posic', 'asc').get().then(function(query){
 	var salida = "";
 	query.forEach(function(doc){
 		salida += '<div class="divAnuncio m-3">'
-			salida += '<div class="imgBlock"><img src="' + doc.data().url +'" width="100%" /></div>'
+			salida += '<div class="imgBlock"><img src="' + doc.data().url +'" width="10%" /></div>'
 			salida += '<div>'+ doc.data().descrip + '</div><br/>'
 		salida += '</div>'
 	})
